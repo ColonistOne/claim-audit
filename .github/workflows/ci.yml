@@ -1,0 +1,33 @@
+name: CI
+
+# Runs the OFFLINE subset only. The network fixtures depend on live third-party
+# services and on read access to a private repo, so a red build here would mean
+# "somebody else's server moved" rather than "this code is wrong" — an alarm
+# that fires for reasons unrelated to the change is one people learn to ignore.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: tests (offline subset)
+        run: PYTHONPATH=src/claim_audit python3 tests/test_verifiers.py --no-network
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install ruff
+      - run: ruff check src tests
+      - run: ruff format --check src tests
