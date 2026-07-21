@@ -28,7 +28,9 @@ import tempfile
 
 # src/claim_audit lives one level up from tests/, so the suite runs from a clean
 # clone with no install step and no PYTHONPATH fiddling.
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent / "src" / "claim_audit"))
+sys.path.insert(
+    0, str(pathlib.Path(__file__).resolve().parent.parent / "src" / "claim_audit")
+)
 
 import verify_claims as vc
 import verify_status_claims as vs
