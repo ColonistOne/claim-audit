@@ -1,0 +1,2152 @@
+{
+    "kind": "ainglish.fuzz-corpus",
+    "version": 2.1,
+    "seed": 20260803,
+    "generator": "tests/PortFuzzTest.php slot generator, verbatim (PHP mt_rand); planted block hand-built, ground-truthed by running measure.py before expectations were written",
+    "note": "Corpus v2 for the three-way diff, per ColonistOne's condition on v1: planted known-answer negatives so agreement between harnesses is measured against ground truth, not just against each other. Planted rounds are flagged and EXCLUDED from natural-distribution stats.",
+    "rounds_natural": 200,
+    "rounds_planted": 6,
+    "rounds_stratum_b": 20,
+    "strata_note": "planted = stratum W (wiring: literature-fixed, expectations published — proves plumbing, excluded from coverage claims). stratum_b = boundary cases, provenance-tagged, NO published expectations: ground truth settles by certificate (a non-UD claim ships its checkable witness) and three-way convergence (UD claims carry no certificate). Constructors know their own port's answers by construction; the provenance tag is what lets a reader discount that.",
+    "slots": [
+        {
+            "round": 0,
+            "slot": {
+                "fyi NOT": "meaning-0",
+                "one-of:": "meaning-0",
+                "ask):": "meaning-1",
+                "fzi NOT": "meaning-1",
+                "any-of=": "meaning-1",
+                "agk):": "meaning-2"
+            }
+        },
+        {
+            "round": 1,
+            "slot": {
+                "pred:": "meaning-2",
+                "color=": "meaning-2",
+                "prex:": "meaning-2"
+            }
+        },
+        {
+            "round": 2,
+            "slot": {
+                "rep(": "meaning-0",
+                "pred):": "meaning-1",
+                "MUST=": "meaning-1",
+                "exh(<x>):": "meaning-0",
+                "rep(<x>):": "meaning-1",
+                "ask(": "meaning-0"
+            }
+        },
+        {
+            "round": 3,
+            "slot": {
+                "MUST):": "meaning-1",
+                "ctl=": "meaning-2",
+                "color):": "meaning-2"
+            }
+        },
+        {
+            "round": 4,
+            "slot": {
+                "ask(": "meaning-2",
+                "esk(": "meaning-2",
+                "elk(": "meaning-0",
+                "ctl):": "meaning-2"
+            }
+        },
+        {
+            "round": 5,
+            "slot": {
+                "req NOT": "meaning-2",
+                "one-of": "meaning-0"
+            }
+        },
+        {
+            "round": 6,
+            "slot": {
+                "ack": "meaning-2",
+                "exh(<x>):": "meaning-2",
+                "req=": "meaning-0",
+                "rbq=": "meaning-1"
+            }
+        },
+        {
+            "round": 7,
+            "slot": {
+                "fyi(": "meaning-1",
+                "fsi(": "meaning-0",
+                "exh=": "meaning-0"
+            }
+        },
+        {
+            "round": 8,
+            "slot": {
+                "color NOT": "meaning-2",
+                "colorgNOT": "meaning-1",
+                "inf NOT": "meaning-2",
+                "c=": "meaning-2",
+                "color NlT": "meaning-2"
+            }
+        },
+        {
+            "round": 9,
+            "slot": {
+                "c(": "meaning-0",
+                "rep:": "meaning-2"
+            }
+        },
+        {
+            "round": 10,
+            "slot": {
+                "SHOULD NOT": "meaning-2",
+                "SHOULD NOm": "meaning-2",
+                "one-of NOT": "meaning-0",
+                "SHOULD bOm": "meaning-2",
+                "SHxULD NOm": "meaning-1",
+                "one-of": "meaning-2"
+            }
+        },
+        {
+            "round": 11,
+            "slot": {
+                "MUST(<x>):": "meaning-1",
+                "obs NOT": "meaning-1"
+            }
+        },
+        {
+            "round": 12,
+            "slot": {
+                "wit NOT": "meaning-1",
+                "among NOT": "meaning-2"
+            }
+        },
+        {
+            "round": 13,
+            "slot": {
+                "exh=": "meaning-2",
+                "now(": "meaning-2",
+                "c NOT": "meaning-2",
+                "pred NOT": "meaning-1"
+            }
+        },
+        {
+            "round": 14,
+            "slot": {
+                "MUST(": "meaning-1",
+                "rep:": "meaning-0",
+                "red:": "meaning-2",
+                "exh NOT": "meaning-0"
+            }
+        },
+        {
+            "round": 15,
+            "slot": {
+                "exh=": "meaning-0",
+                "xxh=": "meaning-0",
+                "c(<x>):": "meaning-2",
+                "kxh=": "meaning-1",
+                "c": "meaning-2",
+                "pred(<x>):": "meaning-2"
+            }
+        },
+        {
+            "round": 16,
+            "slot": {
+                "exh:": "meaning-1",
+                "must not=": "meaning-1",
+                "among": "meaning-0",
+                "fmong": "meaning-0",
+                "c):": "meaning-2"
+            }
+        },
+        {
+            "round": 17,
+            "slot": {
+                "rep NOT": "meaning-0",
+                "pred(<x>):": "meaning-0",
+                "MAY:": "meaning-2",
+                "rup NOT": "meaning-0"
+            }
+        },
+        {
+            "round": 18,
+            "slot": {
+                "ctl=": "meaning-1",
+                "ktl=": "meaning-2",
+                "ctll": "meaning-2",
+                "exh=": "meaning-1",
+                "pred": "meaning-2",
+                "one-of=": "meaning-0"
+            }
+        },
+        {
+            "round": 19,
+            "slot": {
+                "ctl:": "meaning-1",
+                "inf:": "meaning-2"
+            }
+        },
+        {
+            "round": 20,
+            "slot": {
+                "iff(": "meaning-2",
+                "exh:": "meaning-1",
+                "irf(": "meaning-2",
+                "iry(": "meaning-1",
+                "eah:": "meaning-1"
+            }
+        },
+        {
+            "round": 21,
+            "slot": {
+                "MUST):": "meaning-1",
+                "MUrT):": "meaning-0",
+                "among:": "meaning-1",
+                "MUST": "meaning-2",
+                "colour(<x>):": "meaning-0",
+                "eUST": "meaning-1"
+            }
+        },
+        {
+            "round": 22,
+            "slot": {
+                "fyi:": "meaning-2",
+                "iff": "meaning-2",
+                "wit": "meaning-2",
+                "one-of=": "meaning-2",
+                "c(<x>):": "meaning-2",
+                "wff": "meaning-1"
+            }
+        },
+        {
+            "round": 23,
+            "slot": {
+                "iff):": "meaning-2",
+                "ask(": "meaning-2"
+            }
+        },
+        {
+            "round": 24,
+            "slot": {
+                "fyi:": "meaning-1",
+                "fni:": "meaning-0",
+                "inf):": "meaning-0",
+                "iff:": "meaning-1",
+                "any-of=": "meaning-0"
+            }
+        },
+        {
+            "round": 25,
+            "slot": {
+                "now(<x>):": "meaning-2",
+                "pred": "meaning-0"
+            }
+        },
+        {
+            "round": 26,
+            "slot": {
+                "obs NOT": "meaning-0",
+                "obs NOa": "meaning-2",
+                "obe NOT": "meaning-0",
+                "pred):": "meaning-1"
+            }
+        },
+        {
+            "round": 27,
+            "slot": {
+                "MAY=": "meaning-2",
+                "MAl=": "meaning-2"
+            }
+        },
+        {
+            "round": 28,
+            "slot": {
+                "MAY": "meaning-1",
+                "must not(": "meaning-0",
+                "req(": "meaning-0",
+                "must uot(": "meaning-0",
+                "pred(": "meaning-2"
+            }
+        },
+        {
+            "round": 29,
+            "slot": {
+                "now": "meaning-2",
+                "color(<x>):": "meaning-1",
+                "ndw": "meaning-0",
+                "one-of=": "meaning-0",
+                "pred NOT": "meaning-1"
+            }
+        },
+        {
+            "round": 30,
+            "slot": {
+                "color):": "meaning-1",
+                "c(<x>):": "meaning-2",
+                "c(<xk):": "meaning-1",
+                "fyi(<x>):": "meaning-2"
+            }
+        },
+        {
+            "round": 31,
+            "slot": {
+                "ack):": "meaning-1",
+                "ask=": "meaning-2",
+                "amk):": "meaning-0",
+                "ctl(<x>):": "meaning-1",
+                "amm):": "meaning-0",
+                "acko:": "meaning-2"
+            }
+        },
+        {
+            "round": 32,
+            "slot": {
+                "MAY(<x>):": "meaning-2",
+                "MAw(<x>):": "meaning-2",
+                "among:": "meaning-0"
+            }
+        },
+        {
+            "round": 33,
+            "slot": {
+                "iff NOT": "meaning-1",
+                "c(": "meaning-2",
+                "iff:": "meaning-2"
+            }
+        },
+        {
+            "round": 34,
+            "slot": {
+                "rep:": "meaning-2",
+                "MUST:": "meaning-0",
+                "iff(": "meaning-0"
+            }
+        },
+        {
+            "round": 35,
+            "slot": {
+                "MAY": "meaning-0",
+                "eAY": "meaning-2",
+                "colour NOT": "meaning-2",
+                "ack NOT": "meaning-2",
+                "one-of(<x>):": "meaning-1"
+            }
+        },
+        {
+            "round": 36,
+            "slot": {
+                "ack:": "meaning-0",
+                "pred": "meaning-0",
+                "ask):": "meaning-2",
+                "MUST(": "meaning-2",
+                "among(": "meaning-0",
+                "exh(": "meaning-1"
+            }
+        },
+        {
+            "round": 37,
+            "slot": {
+                "exh):": "meaning-0",
+                "req NOT": "meaning-1"
+            }
+        },
+        {
+            "round": 38,
+            "slot": {
+                "colour": "meaning-0",
+                "colouu": "meaning-2",
+                "MUST": "meaning-1",
+                "mUST": "meaning-0"
+            }
+        },
+        {
+            "round": 39,
+            "slot": {
+                "among NOT": "meaning-1",
+                "ctl):": "meaning-2",
+                "inf": "meaning-2",
+                "MUST(<x>):": "meaning-2"
+            }
+        },
+        {
+            "round": 40,
+            "slot": {
+                "MAY:": "meaning-0",
+                "fAY:": "meaning-0",
+                "ask(<x>):": "meaning-2",
+                "any-of):": "meaning-2",
+                "exh": "meaning-1"
+            }
+        },
+        {
+            "round": 41,
+            "slot": {
+                "now(": "meaning-2",
+                "obs:": "meaning-1"
+            }
+        },
+        {
+            "round": 42,
+            "slot": {
+                "fyi NOT": "meaning-0",
+                "inf(": "meaning-2",
+                "ask:": "meaning-0",
+                "req:": "meaning-2"
+            }
+        },
+        {
+            "round": 43,
+            "slot": {
+                "req": "meaning-0",
+                "obs(<x>):": "meaning-2",
+                "SHOULD NOT": "meaning-2"
+            }
+        },
+        {
+            "round": 44,
+            "slot": {
+                "any-of": "meaning-1",
+                "anypof": "meaning-0",
+                "c(<x>):": "meaning-1",
+                "obs(": "meaning-1",
+                "one-of:": "meaning-0",
+                "one-of=": "meaning-0"
+            }
+        },
+        {
+            "round": 45,
+            "slot": {
+                "any-of(<x>):": "meaning-2",
+                "ask NOT": "meaning-2",
+                "one-of(": "meaning-0",
+                "onb-of(": "meaning-2",
+                "inf(": "meaning-0",
+                "infe": "meaning-2"
+            }
+        },
+        {
+            "round": 46,
+            "slot": {
+                "exh(": "meaning-0",
+                "ctl NOT": "meaning-1"
+            }
+        },
+        {
+            "round": 47,
+            "slot": {
+                "c": "meaning-2",
+                "ask:": "meaning-2",
+                "wit(<x>):": "meaning-0",
+                "must not=": "meaning-1",
+                "askj": "meaning-0",
+                "among:": "meaning-2"
+            }
+        },
+        {
+            "round": 48,
+            "slot": {
+                "wit=": "meaning-2",
+                "witv": "meaning-0"
+            }
+        },
+        {
+            "round": 49,
+            "slot": {
+                "any-of=": "meaning-2",
+                "c:": "meaning-0",
+                "any-of:": "meaning-1",
+                "among": "meaning-1"
+            }
+        },
+        {
+            "round": 50,
+            "slot": {
+                "req:": "meaning-0",
+                "MUST=": "meaning-0",
+                "iff:": "meaning-0",
+                "among NOT": "meaning-2",
+                "obs(<x>):": "meaning-1"
+            }
+        },
+        {
+            "round": 51,
+            "slot": {
+                "one-of:": "meaning-0",
+                "must not=": "meaning-0",
+                "rep(<x>):": "meaning-2",
+                "zne-of:": "meaning-2",
+                "wit(<x>):": "meaning-2",
+                "zne-af:": "meaning-0"
+            }
+        },
+        {
+            "round": 52,
+            "slot": {
+                "obs": "meaning-0",
+                "ohs": "meaning-1",
+                "fyi": "meaning-1",
+                "now:": "meaning-2",
+                "ohx": "meaning-1"
+            }
+        },
+        {
+            "round": 53,
+            "slot": {
+                "ask NOT": "meaning-0",
+                "asp NOT": "meaning-2",
+                "ank NOT": "meaning-2",
+                "aspdNOT": "meaning-0",
+                "ank NOg": "meaning-0"
+            }
+        },
+        {
+            "round": 54,
+            "slot": {
+                "must not(": "meaning-2",
+                "obs NOT": "meaning-1"
+            }
+        },
+        {
+            "round": 55,
+            "slot": {
+                "among(": "meaning-2",
+                "wit:": "meaning-0",
+                "c NOT": "meaning-2",
+                "wiv:": "meaning-1",
+                "ack(<x>):": "meaning-2",
+                "SHOULD(<x>):": "meaning-2"
+            }
+        },
+        {
+            "round": 56,
+            "slot": {
+                "exh": "meaning-1",
+                "inf):": "meaning-0",
+                "exl": "meaning-1",
+                "color:": "meaning-0"
+            }
+        },
+        {
+            "round": 57,
+            "slot": {
+                "ask(": "meaning-2",
+                "rep": "meaning-1",
+                "MAY:": "meaning-0",
+                "MUST):": "meaning-0",
+                "pred(": "meaning-0"
+            }
+        },
+        {
+            "round": 58,
+            "slot": {
+                "ack": "meaning-1",
+                "aci": "meaning-0",
+                "MUST):": "meaning-0",
+                "MUsT):": "meaning-1"
+            }
+        },
+        {
+            "round": 59,
+            "slot": {
+                "inf(<x>):": "meaning-1",
+                "must not=": "meaning-0",
+                "any-of": "meaning-1",
+                "must not": "meaning-2",
+                "must ndt=": "meaning-1"
+            }
+        },
+        {
+            "round": 60,
+            "slot": {
+                "rep):": "meaning-2",
+                "repl:": "meaning-0"
+            }
+        },
+        {
+            "round": 61,
+            "slot": {
+                "c": "meaning-0",
+                "among(": "meaning-0",
+                "ack(<x>):": "meaning-0",
+                "any-of=": "meaning-2"
+            }
+        },
+        {
+            "round": 62,
+            "slot": {
+                "fyi=": "meaning-1",
+                "exh": "meaning-1",
+                "ack:": "meaning-0"
+            }
+        },
+        {
+            "round": 63,
+            "slot": {
+                "rep(<x>):": "meaning-1",
+                "tep(<x>):": "meaning-0",
+                "nep(<x>):": "meaning-1",
+                "jep(<x>):": "meaning-1"
+            }
+        },
+        {
+            "round": 64,
+            "slot": {
+                "fyi):": "meaning-1",
+                "iff=": "meaning-1"
+            }
+        },
+        {
+            "round": 65,
+            "slot": {
+                "iff:": "meaning-0",
+                "among(<x>):": "meaning-1",
+                "ack(": "meaning-1",
+                "amonv(<x>):": "meaning-1"
+            }
+        },
+        {
+            "round": 66,
+            "slot": {
+                "fyi": "meaning-0",
+                "colour:": "meaning-0",
+                "cyi": "meaning-0",
+                "fyu": "meaning-2",
+                "ack):": "meaning-1",
+                "fyo": "meaning-0"
+            }
+        },
+        {
+            "round": 67,
+            "slot": {
+                "inf:": "meaning-1",
+                "ijf:": "meaning-1",
+                "c(": "meaning-0"
+            }
+        },
+        {
+            "round": 68,
+            "slot": {
+                "obs:": "meaning-2",
+                "cbs:": "meaning-2",
+                "SHOULD": "meaning-2",
+                "any-of NOT": "meaning-0"
+            }
+        },
+        {
+            "round": 69,
+            "slot": {
+                "iff=": "meaning-2",
+                "iffr": "meaning-1",
+                "igf=": "meaning-2",
+                "req": "meaning-2",
+                "rsq": "meaning-2",
+                "must not=": "meaning-0"
+            }
+        },
+        {
+            "round": 70,
+            "slot": {
+                "pred:": "meaning-1",
+                "now):": "meaning-1",
+                "iff(": "meaning-1",
+                "color": "meaning-2",
+                "sred:": "meaning-2",
+                "nowd:": "meaning-1"
+            }
+        },
+        {
+            "round": 71,
+            "slot": {
+                "inf):": "meaning-2",
+                "colour(<x>):": "meaning-0",
+                "info:": "meaning-1",
+                "color=": "meaning-0",
+                "c=": "meaning-2",
+                "colzr=": "meaning-2"
+            }
+        },
+        {
+            "round": 72,
+            "slot": {
+                "obs:": "meaning-2",
+                "fyi(": "meaning-0",
+                "ozs:": "meaning-1",
+                "ack(": "meaning-1",
+                "ayk(": "meaning-2",
+                "SHOULD": "meaning-0"
+            }
+        },
+        {
+            "round": 73,
+            "slot": {
+                "pred": "meaning-0",
+                "colour(": "meaning-2",
+                "colouj(": "meaning-0",
+                "ack:": "meaning-1",
+                "iff": "meaning-1",
+                "ach:": "meaning-2"
+            }
+        },
+        {
+            "round": 74,
+            "slot": {
+                "color):": "meaning-2",
+                "iff NOT": "meaning-2",
+                "must not=": "meaning-0"
+            }
+        },
+        {
+            "round": 75,
+            "slot": {
+                "SHOULD": "meaning-1",
+                "c(": "meaning-1",
+                "ct": "meaning-1",
+                "ask:": "meaning-0",
+                "rep NOT": "meaning-2"
+            }
+        },
+        {
+            "round": 76,
+            "slot": {
+                "req):": "meaning-1",
+                "MUST=": "meaning-1",
+                "obs NOT": "meaning-1",
+                "pred(": "meaning-1",
+                "obs(": "meaning-2"
+            }
+        },
+        {
+            "round": 77,
+            "slot": {
+                "MUST):": "meaning-2",
+                "wUST):": "meaning-2",
+                "ask:": "meaning-1"
+            }
+        },
+        {
+            "round": 78,
+            "slot": {
+                "now NOT": "meaning-0",
+                "nowzNOT": "meaning-2",
+                "uow NOT": "meaning-1",
+                "MUST(<x>):": "meaning-1"
+            }
+        },
+        {
+            "round": 79,
+            "slot": {
+                "rep NOT": "meaning-1",
+                "MAY NOT": "meaning-1",
+                "among(<x>):": "meaning-1",
+                "pred):": "meaning-1",
+                "ask NOT": "meaning-2"
+            }
+        },
+        {
+            "round": 80,
+            "slot": {
+                "c(<x>):": "meaning-1",
+                "one-of(<x>):": "meaning-0",
+                "ask(<x>):": "meaning-2",
+                "ask(<x>r:": "meaning-2"
+            }
+        },
+        {
+            "round": 81,
+            "slot": {
+                "MUST):": "meaning-0",
+                "obs(<x>):": "meaning-1",
+                "obs(yx>):": "meaning-0",
+                "must not=": "meaning-1",
+                "MUST": "meaning-0"
+            }
+        },
+        {
+            "round": 82,
+            "slot": {
+                "ack(": "meaning-1",
+                "ack:": "meaning-2",
+                "awk(": "meaning-2",
+                "ctl:": "meaning-0",
+                "ark(": "meaning-2",
+                "iff NOT": "meaning-1"
+            }
+        },
+        {
+            "round": 83,
+            "slot": {
+                "c NOT": "meaning-2",
+                "ask": "meaning-0",
+                "now": "meaning-0",
+                "c NOp": "meaning-2"
+            }
+        },
+        {
+            "round": 84,
+            "slot": {
+                "any-of": "meaning-0",
+                "now):": "meaning-2",
+                "nog):": "meaning-0"
+            }
+        },
+        {
+            "round": 85,
+            "slot": {
+                "now:": "meaning-2",
+                "one-of(": "meaning-1",
+                "among": "meaning-0",
+                "must not(<x>):": "meaning-0",
+                "one-cf(": "meaning-0",
+                "colour NOT": "meaning-2"
+            }
+        },
+        {
+            "round": 86,
+            "slot": {
+                "fyi):": "meaning-0",
+                "fyi NOT": "meaning-1",
+                "myi NOT": "meaning-1",
+                "cyi NOT": "meaning-1",
+                "ask(": "meaning-2"
+            }
+        },
+        {
+            "round": 87,
+            "slot": {
+                "rep:": "meaning-1",
+                "rel:": "meaning-0",
+                "res:": "meaning-0",
+                "color NOT": "meaning-0",
+                "coljr NOT": "meaning-0"
+            }
+        },
+        {
+            "round": 88,
+            "slot": {
+                "MUST=": "meaning-2",
+                "inf(<x>):": "meaning-0",
+                "now:": "meaning-2"
+            }
+        },
+        {
+            "round": 89,
+            "slot": {
+                "SHOULD(": "meaning-0",
+                "ack(<x>):": "meaning-1",
+                "among=": "meaning-1",
+                "pred:": "meaning-1"
+            }
+        },
+        {
+            "round": 90,
+            "slot": {
+                "color": "meaning-0",
+                "colof": "meaning-1",
+                "pred):": "meaning-1",
+                "jred):": "meaning-2",
+                "now(<x>):": "meaning-1"
+            }
+        },
+        {
+            "round": 91,
+            "slot": {
+                "rep(<x>):": "meaning-2",
+                "ctl=": "meaning-2",
+                "inf(": "meaning-1",
+                "exh NOT": "meaning-2"
+            }
+        },
+        {
+            "round": 92,
+            "slot": {
+                "SHOULD:": "meaning-0",
+                "SHOeLD:": "meaning-0",
+                "rep=": "meaning-0",
+                "SHOULi:": "meaning-1",
+                "fyi": "meaning-1"
+            }
+        },
+        {
+            "round": 93,
+            "slot": {
+                "pred": "meaning-2",
+                "ack(": "meaning-2"
+            }
+        },
+        {
+            "round": 94,
+            "slot": {
+                "SHOULD(": "meaning-0",
+                "color": "meaning-1",
+                "SHOULh(": "meaning-2",
+                "wit(": "meaning-1",
+                "ctl:": "meaning-2"
+            }
+        },
+        {
+            "round": 95,
+            "slot": {
+                "now NOT": "meaning-1",
+                "wow NOT": "meaning-0",
+                "wow nOT": "meaning-0",
+                "wow qOT": "meaning-2"
+            }
+        },
+        {
+            "round": 96,
+            "slot": {
+                "ack": "meaning-1",
+                "acu": "meaning-0",
+                "iff:": "meaning-1",
+                "SHOULD(": "meaning-1",
+                "one-of=": "meaning-1"
+            }
+        },
+        {
+            "round": 97,
+            "slot": {
+                "c(": "meaning-0",
+                "ask=": "meaning-2",
+                "ack(<x>):": "meaning-2"
+            }
+        },
+        {
+            "round": 98,
+            "slot": {
+                "SHOULD):": "meaning-1",
+                "SHOULb):": "meaning-1",
+                "rep(": "meaning-0",
+                "must not NOT": "meaning-0"
+            }
+        },
+        {
+            "round": 99,
+            "slot": {
+                "wit):": "meaning-0",
+                "jit):": "meaning-1",
+                "ack):": "meaning-1",
+                "fit):": "meaning-0",
+                "req": "meaning-2"
+            }
+        },
+        {
+            "round": 100,
+            "slot": {
+                "ack):": "meaning-0",
+                "acs):": "meaning-2",
+                "one-of NOT": "meaning-1",
+                "among=": "meaning-0",
+                "must not(<x>):": "meaning-1"
+            }
+        },
+        {
+            "round": 101,
+            "slot": {
+                "among(": "meaning-0",
+                "wit(<x>):": "meaning-0",
+                "c(<x>):": "meaning-2"
+            }
+        },
+        {
+            "round": 102,
+            "slot": {
+                "inf=": "meaning-2",
+                "obs(<x>):": "meaning-0",
+                "obs(": "meaning-2",
+                "MAY": "meaning-1",
+                "any-of(": "meaning-2"
+            }
+        },
+        {
+            "round": 103,
+            "slot": {
+                "ack=": "meaning-0",
+                "act=": "meaning-2",
+                "MAY": "meaning-0",
+                "acf=": "meaning-2",
+                "req(<x>):": "meaning-1"
+            }
+        },
+        {
+            "round": 104,
+            "slot": {
+                "wit:": "meaning-2",
+                "ctl:": "meaning-2",
+                "fyi):": "meaning-2",
+                "req": "meaning-1",
+                "fyi:": "meaning-1"
+            }
+        },
+        {
+            "round": 105,
+            "slot": {
+                "inf:": "meaning-2",
+                "req=": "meaning-1",
+                "rej=": "meaning-2",
+                "any-of:": "meaning-0",
+                "ing:": "meaning-2"
+            }
+        },
+        {
+            "round": 106,
+            "slot": {
+                "among": "meaning-2",
+                "amona": "meaning-1"
+            }
+        },
+        {
+            "round": 107,
+            "slot": {
+                "fyi(<x>):": "meaning-2",
+                "iff": "meaning-1",
+                "must not):": "meaning-1",
+                "wit(<x>):": "meaning-1",
+                "any-of:": "meaning-1"
+            }
+        },
+        {
+            "round": 108,
+            "slot": {
+                "pred": "meaning-2",
+                "MAY": "meaning-2",
+                "sAY": "meaning-1",
+                "colour": "meaning-2",
+                "colour NOT": "meaning-2",
+                "ctl NOT": "meaning-1"
+            }
+        },
+        {
+            "round": 109,
+            "slot": {
+                "now(<x>):": "meaning-0",
+                "rep(": "meaning-2",
+                "nlw(<x>):": "meaning-2"
+            }
+        },
+        {
+            "round": 110,
+            "slot": {
+                "pred NOT": "meaning-2",
+                "obs": "meaning-1",
+                "c:": "meaning-0",
+                "color):": "meaning-0",
+                "j:": "meaning-0"
+            }
+        },
+        {
+            "round": 111,
+            "slot": {
+                "ask):": "meaning-2",
+                "askj:": "meaning-0"
+            }
+        },
+        {
+            "round": 112,
+            "slot": {
+                "MAY):": "meaning-2",
+                "exh": "meaning-2",
+                "ext": "meaning-0"
+            }
+        },
+        {
+            "round": 113,
+            "slot": {
+                "ask):": "meaning-2",
+                "wsk):": "meaning-2"
+            }
+        },
+        {
+            "round": 114,
+            "slot": {
+                "exh NOT": "meaning-2",
+                "fyi(<x>):": "meaning-0"
+            }
+        },
+        {
+            "round": 115,
+            "slot": {
+                "fyi NOT": "meaning-1",
+                "ask(": "meaning-1",
+                "color": "meaning-1"
+            }
+        },
+        {
+            "round": 116,
+            "slot": {
+                "any-of(<x>):": "meaning-0",
+                "fyi):": "meaning-2",
+                "yyi):": "meaning-2",
+                "fyis:": "meaning-0",
+                "aey-of(<x>):": "meaning-1"
+            }
+        },
+        {
+            "round": 117,
+            "slot": {
+                "MAY=": "meaning-1",
+                "ask NOT": "meaning-0"
+            }
+        },
+        {
+            "round": 118,
+            "slot": {
+                "exh):": "meaning-2",
+                "obs:": "meaning-2",
+                "req):": "meaning-0"
+            }
+        },
+        {
+            "round": 119,
+            "slot": {
+                "one-of(": "meaning-2",
+                "yne-of(": "meaning-0",
+                "c(<x>):": "meaning-1",
+                "MAY NOT": "meaning-2"
+            }
+        },
+        {
+            "round": 120,
+            "slot": {
+                "color):": "meaning-0",
+                "now(<x>):": "meaning-0",
+                "obs:": "meaning-2",
+                "MAY=": "meaning-1"
+            }
+        },
+        {
+            "round": 121,
+            "slot": {
+                "iff):": "meaning-0",
+                "exh(": "meaning-0",
+                "ifw):": "meaning-1"
+            }
+        },
+        {
+            "round": 122,
+            "slot": {
+                "among:": "meaning-0",
+                "MUST=": "meaning-2",
+                "one-of(": "meaning-1",
+                "amolg:": "meaning-0",
+                "gmolg:": "meaning-0",
+                "amols:": "meaning-0"
+            }
+        },
+        {
+            "round": 123,
+            "slot": {
+                "SHOULD:": "meaning-2",
+                "MAY NOT": "meaning-1",
+                "iff=": "meaning-0",
+                "SHObLD:": "meaning-0"
+            }
+        },
+        {
+            "round": 124,
+            "slot": {
+                "any-of):": "meaning-0",
+                "any-of": "meaning-0",
+                "iff NOT": "meaning-2"
+            }
+        },
+        {
+            "round": 125,
+            "slot": {
+                "fyi(<x>):": "meaning-2",
+                "MUST(<x>):": "meaning-1"
+            }
+        },
+        {
+            "round": 126,
+            "slot": {
+                "wit=": "meaning-2",
+                "req):": "meaning-2",
+                "meq):": "meaning-1"
+            }
+        },
+        {
+            "round": 127,
+            "slot": {
+                "colour:": "meaning-0",
+                "now NOT": "meaning-2",
+                "exh NOT": "meaning-0",
+                "now(<x>):": "meaning-1"
+            }
+        },
+        {
+            "round": 128,
+            "slot": {
+                "exh(": "meaning-0",
+                "among(<x>):": "meaning-0",
+                "rep(<x>):": "meaning-0"
+            }
+        },
+        {
+            "round": 129,
+            "slot": {
+                "exh):": "meaning-1",
+                "exb):": "meaning-1",
+                "iff:": "meaning-1",
+                "colour(<x>):": "meaning-0",
+                "c):": "meaning-0",
+                "coiour(<x>):": "meaning-0"
+            }
+        },
+        {
+            "round": 130,
+            "slot": {
+                "now:": "meaning-0",
+                "ack(": "meaning-0"
+            }
+        },
+        {
+            "round": 131,
+            "slot": {
+                "MAY": "meaning-1",
+                "now NOT": "meaning-0",
+                "SHOULD:": "meaning-0"
+            }
+        },
+        {
+            "round": 132,
+            "slot": {
+                "colour(<x>):": "meaning-0",
+                "colour(<n>):": "meaning-1",
+                "fyi NOT": "meaning-1",
+                "fyirNOT": "meaning-1",
+                "colour(": "meaning-1"
+            }
+        },
+        {
+            "round": 133,
+            "slot": {
+                "wit):": "meaning-2",
+                "iff(<x>):": "meaning-0",
+                "witw:": "meaning-2",
+                "iff NOT": "meaning-0"
+            }
+        },
+        {
+            "round": 134,
+            "slot": {
+                "SHOULD:": "meaning-1",
+                "colour(": "meaning-0",
+                "SsOULD:": "meaning-2",
+                "req(<x>):": "meaning-2",
+                "SHeULD:": "meaning-2"
+            }
+        },
+        {
+            "round": 135,
+            "slot": {
+                "ack):": "meaning-1",
+                "c):": "meaning-1",
+                "exh(": "meaning-0",
+                "any-of": "meaning-2",
+                "rep": "meaning-2"
+            }
+        },
+        {
+            "round": 136,
+            "slot": {
+                "rep(": "meaning-1",
+                "iff=": "meaning-2",
+                "SHOULD=": "meaning-1",
+                "c(<x>):": "meaning-2"
+            }
+        },
+        {
+            "round": 137,
+            "slot": {
+                "exh):": "meaning-2",
+                "exhu:": "meaning-1",
+                "exmu:": "meaning-2",
+                "iff):": "meaning-0"
+            }
+        },
+        {
+            "round": 138,
+            "slot": {
+                "among": "meaning-1",
+                "auong": "meaning-1",
+                "MAY:": "meaning-1",
+                "MaY:": "meaning-0",
+                "ctl):": "meaning-2"
+            }
+        },
+        {
+            "round": 139,
+            "slot": {
+                "wit(<x>):": "meaning-0",
+                "must not(": "meaning-2",
+                "must notb": "meaning-1",
+                "MUST": "meaning-1",
+                "ctl(<x>):": "meaning-0",
+                "MmST": "meaning-1"
+            }
+        },
+        {
+            "round": 140,
+            "slot": {
+                "exh(": "meaning-2",
+                "colour:": "meaning-2",
+                "now:": "meaning-0"
+            }
+        },
+        {
+            "round": 141,
+            "slot": {
+                "MAY NOT": "meaning-1",
+                "MAY qOT": "meaning-1",
+                "color):": "meaning-2"
+            }
+        },
+        {
+            "round": 142,
+            "slot": {
+                "SHOULD):": "meaning-0",
+                "SHOULo):": "meaning-1"
+            }
+        },
+        {
+            "round": 143,
+            "slot": {
+                "inf=": "meaning-2",
+                "anf=": "meaning-1",
+                "color):": "meaning-2",
+                "iff:": "meaning-0"
+            }
+        },
+        {
+            "round": 144,
+            "slot": {
+                "pred(<x>):": "meaning-0",
+                "any-of NOT": "meaning-1"
+            }
+        },
+        {
+            "round": 145,
+            "slot": {
+                "MAY):": "meaning-1",
+                "exh=": "meaning-0",
+                "SHOULD(": "meaning-2",
+                "eph=": "meaning-0",
+                "SHOUeD(": "meaning-1"
+            }
+        },
+        {
+            "round": 146,
+            "slot": {
+                "among(": "meaning-0",
+                "omong(": "meaning-1"
+            }
+        },
+        {
+            "round": 147,
+            "slot": {
+                "colour=": "meaning-1",
+                "cvlour=": "meaning-1",
+                "rep": "meaning-1",
+                "MUST):": "meaning-2"
+            }
+        },
+        {
+            "round": 148,
+            "slot": {
+                "one-of(": "meaning-1",
+                "iff:": "meaning-0",
+                "rep=": "meaning-2"
+            }
+        },
+        {
+            "round": 149,
+            "slot": {
+                "rep):": "meaning-1",
+                "repn:": "meaning-1",
+                "dep):": "meaning-0"
+            }
+        },
+        {
+            "round": 150,
+            "slot": {
+                "ask(": "meaning-2",
+                "MUST(": "meaning-2"
+            }
+        },
+        {
+            "round": 151,
+            "slot": {
+                "colour:": "meaning-0",
+                "one-of NOT": "meaning-1",
+                "colouy:": "meaning-0",
+                "cxlouy:": "meaning-2",
+                "MUST=": "meaning-0"
+            }
+        },
+        {
+            "round": 152,
+            "slot": {
+                "iff=": "meaning-0",
+                "color=": "meaning-1",
+                "colour NOT": "meaning-2",
+                "exh(": "meaning-1",
+                "ilf=": "meaning-1"
+            }
+        },
+        {
+            "round": 153,
+            "slot": {
+                "c": "meaning-0",
+                "ask):": "meaning-1",
+                "j": "meaning-1",
+                "q": "meaning-0",
+                "k": "meaning-2"
+            }
+        },
+        {
+            "round": 154,
+            "slot": {
+                "rep):": "meaning-0",
+                "any-of:": "meaning-2",
+                "iff NOT": "meaning-0",
+                "any-ef:": "meaning-2",
+                "ctl NOT": "meaning-1",
+                "rep(": "meaning-2"
+            }
+        },
+        {
+            "round": 155,
+            "slot": {
+                "now(<x>):": "meaning-0",
+                "noe(<x>):": "meaning-2",
+                "one-of": "meaning-0",
+                "inf=": "meaning-1"
+            }
+        },
+        {
+            "round": 156,
+            "slot": {
+                "MUST=": "meaning-0",
+                "MvST=": "meaning-0",
+                "xUST=": "meaning-2"
+            }
+        },
+        {
+            "round": 157,
+            "slot": {
+                "now(": "meaning-2",
+                "c:": "meaning-0",
+                "MUST):": "meaning-1",
+                "one-of(<x>):": "meaning-2",
+                "nqw(": "meaning-0"
+            }
+        },
+        {
+            "round": 158,
+            "slot": {
+                "exh=": "meaning-0",
+                "any-of(<x>):": "meaning-0",
+                "inf": "meaning-0",
+                "gnf": "meaning-0",
+                "ezh=": "meaning-0",
+                "among(": "meaning-2"
+            }
+        },
+        {
+            "round": 159,
+            "slot": {
+                "ask NOT": "meaning-2",
+                "MUST:": "meaning-0",
+                "qsk NOT": "meaning-1",
+                "any-of": "meaning-2"
+            }
+        },
+        {
+            "round": 160,
+            "slot": {
+                "now):": "meaning-0",
+                "iff=": "meaning-2"
+            }
+        },
+        {
+            "round": 161,
+            "slot": {
+                "ctl NOT": "meaning-2",
+                "ptl NOT": "meaning-2",
+                "ptlzNOT": "meaning-0",
+                "ptl qOT": "meaning-0",
+                "wit:": "meaning-1"
+            }
+        },
+        {
+            "round": 162,
+            "slot": {
+                "SHOULD NOT": "meaning-0",
+                "req": "meaning-0",
+                "MAY": "meaning-1"
+            }
+        },
+        {
+            "round": 163,
+            "slot": {
+                "one-of:": "meaning-2",
+                "SHOULD(": "meaning-0"
+            }
+        },
+        {
+            "round": 164,
+            "slot": {
+                "obs(": "meaning-1",
+                "obx(": "meaning-1",
+                "ojs(": "meaning-1",
+                "wit(<x>):": "meaning-2",
+                "now(": "meaning-2",
+                "ack=": "meaning-0"
+            }
+        },
+        {
+            "round": 165,
+            "slot": {
+                "MUST NOT": "meaning-1",
+                "mUST NOT": "meaning-0",
+                "among": "meaning-0",
+                "MAY NOT": "meaning-0",
+                "SHOULD:": "meaning-0",
+                "MUST NmT": "meaning-0"
+            }
+        },
+        {
+            "round": 166,
+            "slot": {
+                "must not(<x>):": "meaning-1",
+                "mumt not(<x>):": "meaning-2"
+            }
+        },
+        {
+            "round": 167,
+            "slot": {
+                "any-of NOT": "meaning-2",
+                "one-of(": "meaning-2",
+                "any-ot NOT": "meaning-1",
+                "fyi": "meaning-1",
+                "now=": "meaning-1",
+                "any-otdNOT": "meaning-0"
+            }
+        },
+        {
+            "round": 168,
+            "slot": {
+                "rep": "meaning-2",
+                "color=": "meaning-0",
+                "c):": "meaning-2",
+                "now(": "meaning-1",
+                "rep(": "meaning-0"
+            }
+        },
+        {
+            "round": 169,
+            "slot": {
+                "colour:": "meaning-2",
+                "SHOULD": "meaning-2",
+                "colohr:": "meaning-1",
+                "coxohr:": "meaning-0",
+                "colouz:": "meaning-2",
+                "exh=": "meaning-1"
+            }
+        },
+        {
+            "round": 170,
+            "slot": {
+                "MUST": "meaning-0",
+                "wit):": "meaning-2",
+                "wgt):": "meaning-0",
+                "must not(<x>):": "meaning-1",
+                "MmST": "meaning-1",
+                "wis):": "meaning-2"
+            }
+        },
+        {
+            "round": 171,
+            "slot": {
+                "MAY:": "meaning-0",
+                "MkY:": "meaning-0",
+                "MrY:": "meaning-1",
+                "must not:": "meaning-0",
+                "pAY:": "meaning-1",
+                "MrYc": "meaning-2"
+            }
+        },
+        {
+            "round": 172,
+            "slot": {
+                "any-of:": "meaning-1",
+                "SHOULD(<x>):": "meaning-1",
+                "SHOUdD(<x>):": "meaning-0"
+            }
+        },
+        {
+            "round": 173,
+            "slot": {
+                "inf": "meaning-1",
+                "inc": "meaning-0",
+                "pred(": "meaning-1",
+                "obs):": "meaning-1",
+                "any-of=": "meaning-0",
+                "exh=": "meaning-0"
+            }
+        },
+        {
+            "round": 174,
+            "slot": {
+                "wit": "meaning-0",
+                "pred:": "meaning-0",
+                "ack=": "meaning-0",
+                "atk=": "meaning-1",
+                "MAY):": "meaning-0"
+            }
+        },
+        {
+            "round": 175,
+            "slot": {
+                "any-of=": "meaning-1",
+                "ctl NOT": "meaning-0",
+                "SHOULD(<x>):": "meaning-0",
+                "ctl:": "meaning-1",
+                "among": "meaning-1"
+            }
+        },
+        {
+            "round": 176,
+            "slot": {
+                "iff:": "meaning-1",
+                "iff):": "meaning-1"
+            }
+        },
+        {
+            "round": 177,
+            "slot": {
+                "ask):": "meaning-2",
+                "now=": "meaning-2",
+                "axk):": "meaning-2",
+                "akk):": "meaning-1",
+                "nog=": "meaning-1",
+                "MUST):": "meaning-0"
+            }
+        },
+        {
+            "round": 178,
+            "slot": {
+                "colour(<x>):": "meaning-0",
+                "rep):": "meaning-0",
+                "ask": "meaning-1",
+                "rep)d": "meaning-1",
+                "MUST": "meaning-1",
+                "wit):": "meaning-1"
+            }
+        },
+        {
+            "round": 179,
+            "slot": {
+                "rep(<x>):": "meaning-0",
+                "rep(<x>p:": "meaning-1",
+                "MUST NOT": "meaning-1"
+            }
+        },
+        {
+            "round": 180,
+            "slot": {
+                "inf):": "meaning-0",
+                "fyi:": "meaning-0",
+                "c=": "meaning-1",
+                "h=": "meaning-0"
+            }
+        },
+        {
+            "round": 181,
+            "slot": {
+                "one-of(": "meaning-2",
+                "ctl NOT": "meaning-1",
+                "inf(": "meaning-1",
+                "cfl NOT": "meaning-2"
+            }
+        },
+        {
+            "round": 182,
+            "slot": {
+                "must not(<x>):": "meaning-2",
+                "now": "meaning-1",
+                "ask=": "meaning-1",
+                "ask": "meaning-2",
+                "any-of):": "meaning-1",
+                "SHOULD NOT": "meaning-0"
+            }
+        },
+        {
+            "round": 183,
+            "slot": {
+                "c(": "meaning-0",
+                "cv": "meaning-1"
+            }
+        },
+        {
+            "round": 184,
+            "slot": {
+                "SHOULD NOT": "meaning-0",
+                "ShOULD NOT": "meaning-0",
+                "iff NOT": "meaning-2",
+                "ShrULD NOT": "meaning-1",
+                "inf": "meaning-1"
+            }
+        },
+        {
+            "round": 185,
+            "slot": {
+                "any-of NOT": "meaning-1",
+                "colour:": "meaning-1"
+            }
+        },
+        {
+            "round": 186,
+            "slot": {
+                "pred": "meaning-2",
+                "wred": "meaning-1",
+                "wrxd": "meaning-1",
+                "wsed": "meaning-2"
+            }
+        },
+        {
+            "round": 187,
+            "slot": {
+                "any-of):": "meaning-0",
+                "aty-of):": "meaning-1",
+                "c NOT": "meaning-2"
+            }
+        },
+        {
+            "round": 188,
+            "slot": {
+                "among NOT": "meaning-0",
+                "among tOT": "meaning-1"
+            }
+        },
+        {
+            "round": 189,
+            "slot": {
+                "one-of):": "meaning-1",
+                "wit": "meaning-2",
+                "req": "meaning-1",
+                "one-of=": "meaning-2",
+                "ask(<x>):": "meaning-2"
+            }
+        },
+        {
+            "round": 190,
+            "slot": {
+                "exh:": "meaning-2",
+                "one-of:": "meaning-2"
+            }
+        },
+        {
+            "round": 191,
+            "slot": {
+                "any-of NOT": "meaning-1",
+                "any-of NOv": "meaning-1"
+            }
+        },
+        {
+            "round": 192,
+            "slot": {
+                "iff": "meaning-1",
+                "color:": "meaning-1",
+                "one-of=": "meaning-0",
+                "among(": "meaning-2"
+            }
+        },
+        {
+            "round": 193,
+            "slot": {
+                "c NOT": "meaning-2",
+                "c NOk": "meaning-2",
+                "req=": "meaning-2",
+                "obs):": "meaning-0"
+            }
+        },
+        {
+            "round": 194,
+            "slot": {
+                "must not(": "meaning-0",
+                "any-of=": "meaning-0"
+            }
+        },
+        {
+            "round": 195,
+            "slot": {
+                "MUST):": "meaning-2",
+                "vUST):": "meaning-2",
+                "MAY:": "meaning-1",
+                "wit=": "meaning-2",
+                "MAY": "meaning-1"
+            }
+        },
+        {
+            "round": 196,
+            "slot": {
+                "fyi:": "meaning-0",
+                "fyic": "meaning-1",
+                "colour):": "meaning-2"
+            }
+        },
+        {
+            "round": 197,
+            "slot": {
+                "pred NOT": "meaning-2",
+                "fyi:": "meaning-1",
+                "must not):": "meaning-1",
+                "fyw:": "meaning-1"
+            }
+        },
+        {
+            "round": 198,
+            "slot": {
+                "among):": "meaning-2",
+                "must not": "meaning-2",
+                "SHOULD NOT": "meaning-0",
+                "SHOULj NOT": "meaning-2",
+                "req):": "meaning-2"
+            }
+        },
+        {
+            "round": 199,
+            "slot": {
+                "rep NOT": "meaning-2",
+                "dep NOT": "meaning-2",
+                "dep NOg": "meaning-2"
+            }
+        }
+    ],
+    "planted": [
+        {
+            "id": "plant-nonud-sardinas",
+            "class": "non-UD (Sardinas–Patterson witness)",
+            "slot": {
+                "a": "m-one",
+                "ab": "m-two",
+                "ba": "m-three"
+            },
+            "expect": {
+                "gates": true,
+                "uniquely_decodable": false,
+                "sp_witness": "a",
+                "silent_pairs_meaning_blind": 2,
+                "prefix_pairs": 1
+            },
+            "why": "the SP anchor class: ab|a can be read a+b… — a harness that only checks prefix-freeness one way misses it",
+            "provenance": "literature"
+        },
+        {
+            "id": "plant-ud-nesting",
+            "class": "UD despite nesting (converse of prefix-free⇒UD is false)",
+            "slot": {
+                "MUST": "hard requirement",
+                "MUST NOT": "hard prohibition"
+            },
+            "expect": {
+                "gates": false,
+                "uniquely_decodable": true,
+                "sp_witness": null,
+                "silent_pairs_meaning_blind": 0,
+                "prefix_pairs": 1
+            },
+            "why": "a harness that gates on prefix pairs alone false-positives here — nesting decodes fine under longest-match",
+            "provenance": "literature"
+        },
+        {
+            "id": "plant-ud-heavy-nesting",
+            "class": "near-miss: heavy nesting, still UD",
+            "slot": {
+                "0": "zero",
+                "01": "one",
+                "011": "two"
+            },
+            "expect": {
+                "gates": true,
+                "uniquely_decodable": true,
+                "sp_witness": null,
+                "silent_pairs_meaning_blind": 2,
+                "prefix_pairs": 3
+            },
+            "why": "three mutually nesting codewords that a rough SP implementation calls non-UD; the dangling suffixes all die",
+            "provenance": "literature"
+        },
+        {
+            "id": "plant-nonud-concat",
+            "class": "non-UD by concatenation (ca+t = cat)",
+            "slot": {
+                "cat": "feline",
+                "ca": "case",
+                "t": "terminator"
+            },
+            "expect": {
+                "gates": true,
+                "uniquely_decodable": false,
+                "sp_witness": "t",
+                "silent_pairs_meaning_blind": 1,
+                "prefix_pairs": 1
+            },
+            "why": "the witness is itself a codeword — the shortest possible SP termination, first-iteration catch",
+            "provenance": "literature"
+        },
+        {
+            "id": "plant-alias-no-gate",
+            "class": "meaning-aware gate: silent pair, shared meaning, must NOT gate",
+            "slot": {
+                "col=": "colour set",
+                "kol=": "colour set"
+            },
+            "expect": {
+                "gates": false,
+                "uniquely_decodable": true,
+                "sp_witness": null,
+                "silent_pairs_meaning_blind": 1,
+                "prefix_pairs": 0
+            },
+            "why": "a meaning-blind harness gates here; the corruption is real but lands on an alias — count it, never gate it",
+            "provenance": "literature"
+        },
+        {
+            "id": "plant-d1-gate",
+            "class": "the plain d=1 gate (positive control)",
+            "slot": {
+                "req:": "a request",
+                "rep:": "a report"
+            },
+            "expect": {
+                "gates": true,
+                "uniquely_decodable": true,
+                "sp_witness": null,
+                "silent_pairs_meaning_blind": 1,
+                "prefix_pairs": 0
+            },
+            "why": "the corpus's ctl(): a harness that fires on nothing else must at least fire here, or its silence elsewhere means nothing",
+            "provenance": "literature"
+        }
+    ],
+    "stratum_b": [
+        {
+            "id": "rb-00",
+            "slot": {
+                "aabcbc": "meaning-0",
+                "accaac": "meaning-1",
+                "b": "meaning-2",
+                "baac": "meaning-3",
+                "babb": "meaning-4"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-01",
+            "slot": {
+                "ab": "meaning-0",
+                "abbaa": "meaning-1",
+                "b": "meaning-2",
+                "baabab": "meaning-3",
+                "bbbbaab": "meaning-4"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-02",
+            "slot": {
+                "aabcbc": "meaning-0",
+                "accaac": "meaning-1",
+                "b": "meaning-2",
+                "baac": "meaning-3",
+                "babb": "meaning-4"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-03",
+            "slot": {
+                "aaabb": "meaning-0",
+                "aba": "meaning-1",
+                "b": "meaning-2",
+                "baaba": "meaning-3",
+                "bbbab": "meaning-4"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-04",
+            "slot": {
+                "aaaaba": "meaning-0",
+                "aaaabab": "meaning-1",
+                "abbb": "meaning-2",
+                "ba": "meaning-3",
+                "baabba": "meaning-4",
+                "babaaab": "meaning-5"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-05",
+            "slot": {
+                "aa": "meaning-0",
+                "aaaaba": "meaning-1",
+                "aabab": "meaning-2",
+                "baabbaa": "meaning-3",
+                "bba": "meaning-4",
+                "bbaabb": "meaning-5"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-06",
+            "slot": {
+                "aabcbc": "meaning-0",
+                "accaac": "meaning-1",
+                "b": "meaning-2",
+                "baac": "meaning-3",
+                "babb": "meaning-4",
+                "ab": "meaning-5"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-07",
+            "slot": {
+                "abaab": "meaning-0",
+                "b": "meaning-1",
+                "bbbabaa": "meaning-2",
+                "bccbcbb": "meaning-3",
+                "caaa": "meaning-4"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-08",
+            "slot": {
+                "ba": "meaning-0",
+                "baabbbb": "meaning-1",
+                "bababba": "meaning-2"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-09",
+            "slot": {
+                "aaaaba": "meaning-0",
+                "aaaabab": "meaning-1",
+                "abbb": "meaning-2",
+                "ba": "meaning-3",
+                "baabba": "meaning-4",
+                "babaaab": "meaning-5",
+                "aa": "meaning-6"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-10",
+            "slot": {
+                "a": "meaning-0",
+                "b": "meaning-1",
+                "bbaabbb": "meaning-2"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-11",
+            "slot": {
+                "aaaaba": "meaning-0",
+                "aaaabab": "meaning-1",
+                "abbb": "meaning-2",
+                "ba": "meaning-3",
+                "baabba": "meaning-4",
+                "babaaab": "meaning-5"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-12",
+            "slot": {
+                "c": "meaning-0",
+                "ccb": "meaning-1",
+                "cccabb": "meaning-2"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-13",
+            "slot": {
+                "abbaa": "meaning-0",
+                "babccc": "meaning-1",
+                "c": "meaning-2",
+                "cabc": "meaning-3",
+                "cacbba": "meaning-4"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-14",
+            "slot": {
+                "a": "meaning-0",
+                "abc": "meaning-1",
+                "bbc": "meaning-2",
+                "c": "meaning-3",
+                "cb": "meaning-4"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-15",
+            "slot": {
+                "aaa": "meaning-0",
+                "ab": "meaning-1",
+                "bab": "meaning-2",
+                "bb": "meaning-3",
+                "bbaa": "meaning-4"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-16",
+            "slot": {
+                "c": "meaning-0",
+                "ca": "meaning-1",
+                "cb": "meaning-2"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-17",
+            "slot": {
+                "b": "meaning-0",
+                "bbc": "meaning-1",
+                "cbbcb": "meaning-2",
+                "cc": "meaning-3"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-18",
+            "slot": {
+                "a": "meaning-0",
+                "abbaaab": "meaning-1",
+                "baa": "meaning-2",
+                "bb": "meaning-3"
+            },
+            "provenance": "constructed-by-reticuli"
+        },
+        {
+            "id": "rb-19",
+            "slot": {
+                "a": "meaning-0",
+                "aabbb": "meaning-1",
+                "abaa": "meaning-2"
+            },
+            "provenance": "constructed-by-reticuli"
+        }
+    ]
+}
