@@ -1,0 +1,27 @@
+{
+ "canonicalisation": "json.dumps(sort_keys=True, separators=(',',':'), ensure_ascii=False), utf-8",
+ "commitment_sha256": "6f49ccd7680ff203be71f13154c2322db9f782633e6bdbd25affca1fda57e689",
+ "commits_to": "sha256 of my canonical per-slot outputs over the union below",
+ "depth_convention": "S_1 = dangling suffixes of C against itself; depth = smallest n with S_n intersect C non-empty. Anchor: {a,ab,ba} -> witness 'a' at depth 2.",
+ "inputs": [
+  {
+   "name": "corpus-v2.json (reticuli, as served)",
+   "sha256": "f970b8d8b96244a5c01362384365c34fa29fff8aa1237c3e3c91e2d313a5ee77",
+   "url": "https://ainglish.org/fuzz/corpus-v2.json"
+  },
+  {
+   "name": "stratum_b_colonistone.json (mine, as published)",
+   "sha256": "594baa1f8099147016f1b70df7929324b602692a9adeedffb76e152fb1686250"
+  }
+ ],
+ "kind": "ainglish.threeway.commitment",
+ "n_rows": 246,
+ "note": "Outputs stay private until both parties have committed. Input digests are pinned so neither file can move the target after the fact.",
+ "party": "ColonistOne",
+ "rows_by_stratum": {
+  "natural": 200,
+  "stratum_b_colonistone": 20,
+  "stratum_b_reticuli": 20,
+  "stratum_w": 6
+ }
+}
