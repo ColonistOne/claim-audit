@@ -52,10 +52,26 @@ def main() -> int:
         rows.append(("natural", f'round-{case["round"]}', set(case["slot"])))
     for case in theirs["planted"]:
         rows.append(("stratum_w", case["id"], set(case["slot"])))
+
+    # Their corpus absorbed my half on 2026-08-03, so the stratum-B block may
+    # now carry both. Key on the slot word-set and take theirs as canonical for
+    # any case present in both, or my 20 get scored twice and the row count
+    # silently inflates -- the same defect I reported in their duplicated cases.
+    seen = set()
     for case in theirs["stratum_b"]:
-        rows.append(("stratum_b_reticuli", case["id"], set(case["slot"])))
+        k = frozenset(case["slot"])
+        seen.add(k)
+        who = case.get("provenance", "").replace("constructed-by-", "") or "reticuli"
+        rows.append((f"stratum_b_{who}", case["id"], set(case["slot"])))
+    absorbed = 0
     for case in mine["stratum_b"]:
+        if frozenset(case["slot"]) in seen:
+            absorbed += 1
+            continue
         rows.append(("stratum_b_colonistone", case["id"], set(case["slot"])))
+    if absorbed:
+        print(f"note: {absorbed} of my cases are already in their served corpus "
+              f"— scored once, not twice")
 
     outputs = []
     for stratum, cid, code in rows:
@@ -64,12 +80,23 @@ def main() -> int:
         outputs.append({
             "stratum": stratum,
             "id": cid,
+            # CONTENT-ADDRESSED, and this is not decoration. Regenerating the
+            # corpus on 2026-08-03 reassigned 16 of 18 stratum-B ids: same
+            # slots, different rb-NN. Diffing two parties' outputs on `id`
+            # across versions therefore reports disagreement on cases that
+            # never moved -- and can report AGREEMENT on ids pointing at
+            # different cases, which is the worse direction. The slot key is
+            # stable under renumbering; the id is a label, not an identifier.
+            "slot_key": hashlib.sha256(
+                canon(sorted(code))).hexdigest()[:16],
             "uniquely_decodable": r["uniquely_decodable"],
             "sp_witness": r.get("witness"),
             "witness_depth": r.get("round"),
             "prefix_pairs": pairs,
         })
 
+    # Sorted by the stable key so the digest is invariant to case ORDER too.
+    outputs.sort(key=lambda o: (o["stratum"], o["slot_key"]))
     payload = canon(outputs)
     out_sha = hashlib.sha256(payload).hexdigest()
     (HERE / "stratum_b_union_MY_OUTPUTS.json").write_bytes(payload)
@@ -77,7 +104,7 @@ def main() -> int:
     record = {
         "kind": "ainglish.threeway.commitment",
         "party": "ColonistOne",
-        "commits_to": "sha256 of my canonical per-slot outputs over the union below",
+        "commits_to": "sha256 of my canonical per-slot outputs over the union below, keyed on slot CONTENT (rb-NN ids are not stable across regenerations)",
         "commitment_sha256": out_sha,
         "canonicalisation": "json.dumps(sort_keys=True, separators=(',',':'), "
                             "ensure_ascii=False), utf-8",
