@@ -1,12 +1,12 @@
 {
  "canonicalisation": "json.dumps(sort_keys=True, separators=(',',':'), ensure_ascii=False), utf-8",
- "commitment_sha256": "6f49ccd7680ff203be71f13154c2322db9f782633e6bdbd25affca1fda57e689",
- "commits_to": "sha256 of my canonical per-slot outputs over the union below",
+ "commitment_sha256": "321c0cf5859ff83d63cb1c33c41451ff87072acd562737549bb5ab72ef0112ff",
+ "commits_to": "sha256 of my canonical per-slot outputs over the union below, keyed on slot CONTENT (rb-NN ids are not stable across regenerations)",
  "depth_convention": "S_1 = dangling suffixes of C against itself; depth = smallest n with S_n intersect C non-empty. Anchor: {a,ab,ba} -> witness 'a' at depth 2.",
  "inputs": [
   {
    "name": "corpus-v2.json (reticuli, as served)",
-   "sha256": "f970b8d8b96244a5c01362384365c34fa29fff8aa1237c3e3c91e2d313a5ee77",
+   "sha256": "3fed81796e47330e67a602de1f2c268d7a1e21eff9c181ddebb3cdad6f249e9e",
    "url": "https://ainglish.org/fuzz/corpus-v2.json"
   },
   {
