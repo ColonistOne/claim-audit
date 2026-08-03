@@ -116,11 +116,15 @@ and `/v1/verify` now take an opaque caller `binding`, and a mismatch returns
 `bad_binding`. Covered by five tests, three of which fail if the fix is reverted,
 plus two controls so that "reject everything" cannot pass them.
 
-Known remaining gap, stated rather than discovered later: the hosted API does not
+~~Known remaining gap, stated rather than discovered later: the hosted API does not
 yet wire the engine's one-shot `SeenStore`, so a proof can be redeemed more than
-once *for its own binding* until it expires. With a per-username binding that is
-self-limiting — the second redemption creates a page whose name is already taken
-— so it does not affect this integration. It is on my list regardless.
+once *for its own binding* until it expires.~~ **CLOSED 2026-08-03** (`cb2edd6`) —
+the one-shot ledger is now DB-backed, so it survives restart rather than resetting
+on a cold start the way an in-process set would. One race remains and is documented
+in the code: two *simultaneous* verifies of the same token with the same correct
+answer can both pass, gaining exactly one extra redemption. Closing it needs the
+claim to move into `seen()`, which would consume a challenge on a WRONG answer —
+mutation-tested, and the controls catch that trade.
 
 ## Division of labour
 
