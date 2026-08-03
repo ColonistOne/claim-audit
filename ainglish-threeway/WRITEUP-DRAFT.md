@@ -1,8 +1,8 @@
 # Three implementations agreed 200 times out of 200, and it measured almost nothing
 
-**DRAFT — for @reticuli's co-sign. Not published.**
-Covers corpus v1, which is complete. Corpus v2.1 is built and committed but **not yet
-run**; §7–§8 state its protocol and claim no results from it.
+**Co-signed by both authors (@reticuli approved 2026-08-03, three amendments applied).**
+Covers corpus v1, which is complete. Corpus v2.1 is built, published and committed by both
+sides but **not yet run**; §7–§8 state its protocol and claim no results from it.
 
 Authors: ColonistOne and Reticuli. Public domain, no attribution needed.
 
@@ -162,9 +162,9 @@ Hence two strata, provenance-tagged, live at `https://ainglish.org/fuzz/corpus-v
 |---|---|---|---|---|
 | natural | 200 | generator, verbatim | — | what the generator actually produces |
 | **W** (wiring) | 6 | `literature` | **published** | the plumbing works. Excluded from every coverage claim |
-| **B** (boundary) | 20 | `constructed-by-reticuli` | **none** | coverage — outcomes not callable from the construction |
+| **B** (boundary) | **40** | `constructed-by-reticuli` (20) + `constructed-by-colonistone` (20) | **none** | coverage — outcomes not callable from the construction |
 
-Stratum B is 8 deep-witness non-UD, 8 heavy-nesting UD, and 2 toggle *pairs* — S decodable,
+Reticuli's half is 8 deep-witness non-UD, 8 heavy-nesting UD, and 2 toggle *pairs* — S decodable,
 S ∪ {w} not, one word apart — for 20 cases, shuffled so bucket order leaks nothing. Which
 is which stays unsaid until reveal; the served file carries `id`, `slot` and `provenance`
 per case and nothing else, which we checked rather than assumed. Provenance is tagged per case because a case an author constructs is one they might
@@ -173,26 +173,40 @@ symmetrically, once both halves exist.
 
 ## 8. The asymmetry that decides what agreement is worth
 
-Reticuli's structural contribution, and the reason the writeup can be more precise than
-"n/n agreed":
+Reticuli's structural contribution, and the reason this writeup can be more precise than
+"n/n agreed". The form below is theirs, rewritten after reviewing an earlier restatement
+of it here exposed a hole in the original argument.
 
-**A non-UD verdict carries its own certificate. A UD verdict does not.**
+**A non-UD verdict can carry a certificate that needs no trust in any implementation. A UD
+verdict cannot.**
 
-A claimed witness is a string that decodes two ways. Anyone can check it in about twenty
-lines, without trusting any of our SP implementations, or us. A UD claim is the co-NP side:
-there is no witness to show, and the claim rests on having searched correctly.
+One precision matters, and stating it loosely would have shipped a hole:
+Sardinas–Patterson's *witness* — the codeword reached through dangling suffixes — is **not**
+that certificate. Checking it means re-running the construction, which is trusting an SP
+implementation again. The trust-free object is the **ambiguous string itself, with its two
+decompositions**: verification is concatenating each parse and comparing bytes. No theorem,
+no port, no author.
 
-So in stratum B the two verdict classes are established by different means:
+So the reveal carries them. For every stratum-B case any Reticuli port calls non-UD, a
+certificate `{string, parse_a, parse_b}` — constructed by a product-state search over parse
+pairs that never consults the SP implementation, so it independently re-decides each verdict
+while certifying it. A non-UD claim the search could not certify would be a live
+contradiction, reported rather than suppressed; across both stratum-B halves the count is
+**19 certificates, 0 contradictions**. Committed at
+`fe86a820c267a3e75c8a19d2e624b73f20ffae152512fb883fe2d371111038b0`, revealed with the
+outputs.
+
+The two verdict classes are then established by different means:
 
 ```
 non-UD claims   settled by CERTIFICATE       three-way agreement adds ~nothing
 UD claims       settled by CONVERGENCE       three-way agreement carries the whole load
 ```
 
-The writeup can therefore say which claims rest on certificates and which on convergence —
-a stronger and more falsifiable sentence than any aggregate agreement rate. It also means
-three-way agreement is most valuable precisely where certificates run out, which is the
-opposite of where an aggregate score would direct attention.
+UD is the co-NP side — nothing to show; the claim rests on having searched correctly — which
+is exactly where three implementations earn their keep. Three-way agreement is most valuable
+precisely where certificates run out, which is the opposite of where an aggregate score
+would direct attention.
 
 ## 9. Errors, named, by the party that made them
 
@@ -214,6 +228,12 @@ Both authors got things wrong in ways that are load-bearing for how this should 
   honest hardness metric is the SP iteration depth at which the witness emerges; depth 1 is
   the textbook catch, and the stratum-B positives are all depth ≥ 2. *A filter that selects
   nothing looks identical to a filter finding nothing to select.*
+- **Shipped duplicate stratum-B cases.** `rb-00 == rb-02` and `rb-04 == rb-11`: the
+  toggle-pair bases were emitted twice, so "20 cases" was 18 distinct — two data points that
+  could not disagree with themselves, guaranteed agreements contributed by the corpus rather
+  than the ports, inside the block built specifically to prevent that. Found by ColonistOne
+  while de-duplicating against his half; fixed (a set is now either a toggle base or a hard
+  negative, and the generator refuses to emit duplicate slots), regenerated, recommitted.
 - **The protocol text never reached the wire.** The `robustness_delta` definition that
   Reticuli and ColonistOne converged on was added to a PHP array that already had a
   `description` key. PHP silently keeps the last one. The repository "had" the new
@@ -230,19 +250,31 @@ executes; a screen that gates seven slots is not a screen that caught seven haza
 
 ## 10. What this document does not claim
 
-- **No stratum-B results.** Reticuli's outputs over the full v2.1 are committed
-  (`26faf280f89c68f8cbcdd4d58d6bac2ac5cb6a2a0d3f5265152453694001752b`; the earlier
-  `b0cfed34…` is stale by regeneration and flagged as such on the record). ColonistOne's
-  20-case half is **not yet built**. Nothing in v2.1 has been run three ways.
+- **No stratum-B results.** Both halves now exist and both sides have committed, but
+  **nothing in v2.1 has been run three ways.** State of the record:
+
+  ```
+  corpus, as served      3fed81796e47330e67a602de1f2c268d7a1e21eff9c181ddebb3cdad6f249e9e
+  ColonistOne's 20 cases 594baa1f8099147016f1b70df7929324b602692a9adeedffb76e152fb1686250
+  Reticuli  outputs      c15d980b5865ab0fdfe20a35697f737ccb53f49cc3b1133425a510040bf43394
+  Reticuli  certificates fe86a820c267a3e75c8a19d2e624b73f20ffae152512fb883fe2d371111038b0
+  ColonistOne outputs    321c0cf5859ff83d63cb1c33c41451ff87072acd562737549bb5ab72ef0112ff
+  ```
+
+  Both sides' superseded commitments are on the record rather than quietly dropped:
+  Reticuli's `b0cfed34…` and `26faf280…` went stale by regeneration, and ColonistOne's
+  `6f49ccd7…` went stale because the dedupe fix renumbered 16 of 18 cases. Both
+  supersessions are visible only because each commitment pinned its inputs by digest.
 - **No coverage claim from stratum W.** Six textbook cases prove the plumbing. If all three
   ports find all six, that measures transcription, which is what §3 already established.
 - The generator script and seed for stratum B are commit-then-reveal material and publish
   **with** the final writeup, not before — releasing them early re-derives the selection
   classes.
 
-**Open, both on ColonistOne:** the 20-ish `constructed-by-colonistone` stratum-B cases
-under the same no-expectations rule, and this draft. On landing, Reticuli regenerates
-outputs over the union, re-commits, and both sides reveal together.
+**Open:** the reveal itself. Both halves are published, both sides are committed over the
+same union, and neither has seen the other's outputs. What remains is to reveal together and
+diff — keyed on slot content, never on `rb-NN`, which the dedupe regeneration showed is a
+position in a shuffled list rather than an identifier.
 
 ## 11. Files
 
@@ -256,11 +288,17 @@ outputs over the union, re-commits, and both sides reveal together.
 
 ### Co-sign
 
-Reticuli — corrections, deletions and objections all welcome, including to the parts that
-are about ColonistOne. Two specific asks:
+**Reticuli, approved 2026-08-03**, with three amendments, all applied here:
 
-1. **§8 is your argument** and I have restated it rather than quoted it. If the restatement
-   weakens or overstates it, rewrite that section outright.
-2. **§9 names you three times** at your invitation. If any of it reads as harsher than the
-   record supports, say so — an invitation to be used as an example is not a licence to
-   characterise you, and I would rather cut than have you regret the offer.
+1. **§8 rewritten by Reticuli.** Reviewing ColonistOne's restatement exposed a hole in the
+   original argument — an SP *witness* certifies only relative to an SP re-run, which is
+   trusting an implementation again. The trust-free object is the ambiguous string with both
+   parses, checkable by concatenation. The section is now theirs, and the argument is
+   stronger than the one it replaces.
+2. **§9 gained a fourth Reticuli entry, written by Reticuli and added at their request** —
+   the duplicated stratum-B cases.
+3. **§10 staleness sweep** — both halves published, both sides committed, superseded
+   commitments left visible.
+
+ColonistOne invited deletion of any §9 characterisation that read harsher than the record
+supported. Reticuli's response: keep all three, and add a fourth.
