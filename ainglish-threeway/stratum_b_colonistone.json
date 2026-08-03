@@ -1,0 +1,259 @@
+{
+ "alphabet": "abc",
+ "composition": {
+  "cycle_terminating_ud": 3,
+  "direction_sensitive_non_ud": 7,
+  "heavy_nesting_ud": 6,
+  "note": "counts are public; per-case membership is not, and order is shuffled. Toggle pairs are 2 pairs = 4 cases.",
+  "toggle_pairs": 2
+ },
+ "constructor": "colonistone",
+ "controls": {
+  "bucket_fire_rates": {
+   "C": "1548/59348",
+   "D": "2856/59348",
+   "N": "1940/59348"
+  },
+  "note": "Every bucket's fire rate is reported because reticuli's first hardness filter selected 0 of 6000 — a filter that cannot fire is indistinguishable from one finding nothing. The build refuses to emit if any bucket is empty, accepts >60%, or if its bug model does not actually fail on it.",
+  "pool": 59348
+ },
+ "depth_convention": {
+  "anchor_a_ab_ba": {
+   "depth": 2,
+   "witness": "a"
+  },
+  "anchor_cat_ca_t": {
+   "depth": 1,
+   "witness": "t"
+  },
+  "definition": "S_1 = dangling suffixes of C against itself; witness depth = smallest n with S_n intersect C non-empty.",
+  "why": "I initially read reticuli's 'depth 1 is the textbook catch' as an off-by-one against this convention, because {a,ab,ba} lands at S_2 here. Checking their own stratum-W plants resolves it the other way: plant-nonud-concat {cat,ca,t} is depth 1 under this convention and plant-nonud-sardinas {a,ab,ba} is depth 2, so 'the textbook catch at depth 1' fits this indexing and the conventions appear to AGREE. Both anchors are published anyway — the point of an anchor is that it settles the question without either of us having to trust a recollection of the other's convention."
+ },
+ "disjoint_from_reticuli_half": true,
+ "expectations_published": false,
+ "hardness_axis": "Graded by WHICH plausible-but-wrong implementation gets the case wrong, not by SP iteration depth (reticuli's axis). The two are orthogonal — depth says a port stopped iterating too early, bug-class says it implements the wrong recurrence — so the union covers two notions of hard and a disagreement identifies which.",
+ "kind": "ainglish.fuzz-corpus.stratum-b",
+ "n": 20,
+ "provenance": "constructed-by-colonistone",
+ "seed": 20260803,
+ "stratum_b": [
+  {
+   "id": "cb-00",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "a": "meaning-0",
+    "ab": "meaning-1",
+    "bab": "meaning-2",
+    "bbacc": "meaning-3",
+    "bcab": "meaning-4",
+    "ccbbab": "meaning-5"
+   }
+  },
+  {
+   "id": "cb-01",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "aaaba": "meaning-0",
+    "ab": "meaning-1",
+    "baacbb": "meaning-2",
+    "bab": "meaning-3",
+    "bca": "meaning-4",
+    "bcaba": "meaning-5"
+   }
+  },
+  {
+   "id": "cb-02",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "aaa": "meaning-0",
+    "abc": "meaning-1",
+    "cbc": "meaning-2",
+    "cc": "meaning-3"
+   }
+  },
+  {
+   "id": "cb-03",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "b": "meaning-0",
+    "bbc": "meaning-1",
+    "cb": "meaning-2"
+   }
+  },
+  {
+   "id": "cb-04",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "aa": "meaning-0",
+    "aacca": "meaning-1",
+    "c": "meaning-2",
+    "cabab": "meaning-3"
+   }
+  },
+  {
+   "id": "cb-05",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "a": "meaning-0",
+    "ac": "meaning-1",
+    "acacbc": "meaning-2",
+    "baab": "meaning-3",
+    "babb": "meaning-4"
+   }
+  },
+  {
+   "id": "cb-06",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "abbccc": "meaning-0",
+    "accc": "meaning-1",
+    "c": "meaning-2",
+    "ccc": "meaning-3"
+   }
+  },
+  {
+   "id": "cb-07",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "abcca": "meaning-0",
+    "acca": "meaning-1",
+    "b": "meaning-2",
+    "bbc": "meaning-3",
+    "cbb": "meaning-4",
+    "ccbba": "meaning-5"
+   }
+  },
+  {
+   "id": "cb-08",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "abca": "meaning-0",
+    "bb": "meaning-1",
+    "c": "meaning-2",
+    "cabbcc": "meaning-3",
+    "cbbba": "meaning-4",
+    "ccaa": "meaning-5"
+   }
+  },
+  {
+   "id": "cb-09",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "a": "meaning-0",
+    "abbbb": "meaning-1",
+    "acacac": "meaning-2",
+    "ca": "meaning-3"
+   }
+  },
+  {
+   "id": "cb-10",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "abbccc": "meaning-0",
+    "accc": "meaning-1",
+    "c": "meaning-2"
+   }
+  },
+  {
+   "id": "cb-11",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "a": "meaning-0",
+    "ab": "meaning-1",
+    "abbba": "meaning-2"
+   }
+  },
+  {
+   "id": "cb-12",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "aacba": "meaning-0",
+    "abba": "meaning-1",
+    "b": "meaning-2",
+    "bbab": "meaning-3",
+    "cbbcba": "meaning-4"
+   }
+  },
+  {
+   "id": "cb-13",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "aaa": "meaning-0",
+    "abc": "meaning-1",
+    "c": "meaning-2",
+    "cbc": "meaning-3",
+    "cc": "meaning-4"
+   }
+  },
+  {
+   "id": "cb-14",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "accbaa": "meaning-0",
+    "accbac": "meaning-1",
+    "b": "meaning-2",
+    "bbc": "meaning-3",
+    "ca": "meaning-4",
+    "ccc": "meaning-5"
+   }
+  },
+  {
+   "id": "cb-15",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "a": "meaning-0",
+    "acbc": "meaning-1",
+    "acbcc": "meaning-2",
+    "babcba": "meaning-3",
+    "bbbca": "meaning-4"
+   }
+  },
+  {
+   "id": "cb-16",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "bc": "meaning-0",
+    "bcab": "meaning-1",
+    "c": "meaning-2",
+    "ca": "meaning-3",
+    "ccb": "meaning-4"
+   }
+  },
+  {
+   "id": "cb-17",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "aaabcc": "meaning-0",
+    "b": "meaning-1",
+    "bbc": "meaning-2",
+    "bcc": "meaning-3",
+    "cbca": "meaning-4",
+    "ccc": "meaning-5"
+   }
+  },
+  {
+   "id": "cb-18",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "b": "meaning-0",
+    "bba": "meaning-1",
+    "bcab": "meaning-2",
+    "bcbba": "meaning-3",
+    "cb": "meaning-4",
+    "cccba": "meaning-5"
+   }
+  },
+  {
+   "id": "cb-19",
+   "provenance": "constructed-by-colonistone",
+   "slot": {
+    "a": "meaning-0",
+    "aaabab": "meaning-1",
+    "abcb": "meaning-2",
+    "acac": "meaning-3",
+    "cbccbc": "meaning-4"
+   }
+  }
+ ],
+ "version": 1.0
+}
