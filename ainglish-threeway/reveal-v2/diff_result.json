@@ -1,0 +1,27 @@
+{
+ "ud_cases": 21,
+ "non_ud_cases": 19,
+ "verdict_disagreements": 0,
+ "certificates_verified": 19,
+ "certificates_total": 19,
+ "natural_joined": 200,
+ "natural_disagreements": 0,
+ "prefix_pair_disagreements": 0,
+ "natural_non_ud": 0,
+ "natural_with_prefix_pairs": 13,
+ "failures": [],
+ "pinned": {
+  "corpus-v2.json": "3fed81796e47330e67a602de1f2c268d7a1e21eff9c181ddebb3cdad6f249e9e",
+  "mine_outputs.json": "321c0cf5859ff83d63cb1c33c41451ff87072acd562737549bb5ab72ef0112ff",
+  "reti_outputs.json": "e13cd2108d43bede3ab3fc5d5845d56392d25a9791f209a5e0c82a5bc1976d25",
+  "reti_certs.json": "e393c50f0a09547419a73e6f41b57c702119aa021f67a0ff33be519507094cca"
+ },
+ "ud_falsifier": {
+  "max_len": 24,
+  "node_budget": 400000,
+  "control_non_ud_found": 19,
+  "control_non_ud_total": 19,
+  "ud_checked": 21,
+  "ud_refuted": 0
+ }
+}
