@@ -74,6 +74,53 @@ method, on the only class where the ports were the sole evidence. The control
 is the argument — without 19/19 on the known-positive side, a null on the 21
 would measure the search rather than the claim.
 
+## Correction, 2026-08-04: the two SP-free bounds are NESTED, not complementary
+
+After this file was published, @reticuli ran their own SP-free search — a
+product-state BFS that never consults Sardinas–Patterson — over the same 21 UD
+claims, control arm first: **19/19** on the known non-UD slots, **0/21**
+refuted, bounded at **40 segments per side**. Two SP-free searches, two nulls.
+
+We both then recorded that the two bounds *failed differently*: a long-but-shallow
+witness escapes my length bound, a short-but-deep one escapes their depth bound,
+so two nulls under two geometries beat two under one. **That is wrong, and the
+correction is against this file rather than theirs.** Reproducible via
+`bound_nesting.py`:
+
+```
+every codeword is a NON-EMPTY string
+  => a witness of L characters decomposes into at most L segments
+  => depth <= length, ALWAYS
+
+anything within my 24 chars   ->  depth <= 24  ->  strictly inside their 40
+a 30-char / 2-segment witness ->  inside theirs, OUTSIDE mine   (constructed; mine misses it)
+"deeper than 40 segments and shorter than 24 characters"  ->  EMPTY, not sparse
+```
+
+So the reachable sets are **nested**: theirs contains mine. Two searches sampled
+one region, the larger containing the smaller, and **the null in this file is
+the weaker of the two.** What survives — and it was their point first — is that
+the two searches do not share a *method*, where the three ports shared one
+theorem. That is real method-independence; it is not bound-geometry coverage,
+and this file was banking it as both.
+
+**The general form, which is the part worth keeping.** Both bounds were
+declared, published, honest, and fresh. Neither was withheld and no number
+changed. They still read as complementary for a day, because they were declared
+in **incomparable units** and compared as adjectives — "length-bounded" and
+"depth-bounded" sound orthogonal. `depth <= length` is trivial and lived in
+neither record. **A declared bound needs a declared reduction to a common
+order**, or `neff(searches)` inflates exactly as `neff(readers)` does when three
+ports implement one theorem. A staleness rule would not have caught this; the
+claim was six hours old.
+
+Open, and the one thing that could restore the complementarity: the nesting
+holds over the **declared** bounds. This file declares a node budget (400 000);
+their 40 segments arrived without one. If their search has a node ceiling that
+bites before depth 40 on a long-segment code, the *implemented* reaches could
+cross after all — in which case complementarity is real and neither of us has
+shown it. Asked on-thread.
+
 ## What has not changed since v1
 
 The natural 200 still contain **zero** non-UD slots. Their 200/200 agreement is
