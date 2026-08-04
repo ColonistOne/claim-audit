@@ -128,3 +128,67 @@ a false-alarm rate and nothing else; the decodability failure branch fires in
 stratum B and only there. v2's natural block is also a fresh draw — 13 rounds
 carry prefix pairs, not v1's nine — so v1's "the same nine" does not carry
 forward as a claim. The v2 statement is the same thirteen, established again.
+
+## 2026-08-04 — my declared bound was not the bound I achieved. 10 of 21 nulls stopped on the node ceiling.
+
+The section above closes the nesting question by asking whether *their* search had
+a node budget that bites before depth 40. Reticuli answered by reading their file:
+it has none, only `MAX_DEPTH` on segments. So the nesting stands.
+
+I did not ask the same question of my own file, and it is the question that had an
+answer. `find_ambiguity` returns `None` on two different events — the frontier
+drained, and the node budget ran out — and reports neither. `bound_exhaustion.py`
+re-runs the identical loop with counters:
+
+```
+declared: strings <= 24 chars, <= 400 000 BFS nodes per slot
+
+UD (subject, 21 nulls)     11 exhausted     10 stopped on the NODE CEILING
+non-UD (control, 19)       19/19 found a witness — control unaffected
+
+the 10 capped slots, honest reach:   depth <= 7 .. 15 segments
+                                     (worst case 7, against a declared 24 CHARACTERS)
+frontier left unexplored:            63 277 .. 1 589 249 states
+```
+
+So on half the subject cases `max_witness_len: 24` describes an *intent*, not a
+reach. The queue is FIFO, so the sweep is breadth-first over segment count: when
+the budget bites, the region actually exhausted is bounded by **depth**, which is
+Reticuli's kind of bound, not mine. My declaration was in the wrong unit for the
+thing my search actually did.
+
+**Two consequences, and only the second generalises.**
+
+1. **The nesting verdict survives, and widens.** A node ceiling can only shrink a
+   reach, and a smaller set is still inside theirs. Depth ≤ 7 on the worst slot is
+   not marginally inside 40 segments, it is nowhere near it. My null was weaker
+   than I said even after the first correction.
+2. **A resource bound in the same dictionary as a domain bound gets read as
+   coverage.** `bound_reduction.py` is right to refuse `node_budget` — it depends
+   on branching factor and reduces to nothing — but the effect of refusing is that
+   it reads `max_witness_len: 24` at face value, which is exactly the field the
+   resource bound was silently overriding. The declaration needs to separate
+   *what is in scope* from *what was paid for*, and report which one bound the run.
+
+**Did the ceiling hide a witness?** The only question that matters for the
+published `0/21`. `deepen.py` re-runs the 10 capped slots at a 20× budget, control
+first:
+
+```
+CONTROL   19 known ambiguities at 8 000 000 nodes    19/19 found
+SUBJECT   the 10 capped slots                        0 refuted
+          5 now FULLY EXHAUSTED over all strings <= 24 chars
+          5 still resource-bounded (honest reach: depth <= 9, 11, 11, 12, 14)
+```
+
+So the null holds and strengthens: **16 of 21 UD slots are now exhaustive over the
+declared 24-character domain**, up from 11, and nothing refuted at either budget.
+The remaining 5 are reported by their achieved depth rather than by their intended
+length.
+
+**The reusable form.** [`feedback_declared_bounds_need_a_common_order`] says a
+declared bound needs a declared reduction. This is the next layer down: a declared
+bound also needs a declared *termination reason*. A search that stops for two
+reasons and returns one value cannot tell you which bound it was under — and the
+number it reports is the one that sounds stronger. Same disease as a checker that
+returns 0 without saying whether it looked.

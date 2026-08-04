@@ -1,0 +1,407 @@
+{
+ "max_len": 24,
+ "node_budget": 400000,
+ "capped": 10,
+ "rows": [
+  {
+   "found": false,
+   "terminated": "node_budget",
+   "nodes": 400000,
+   "max_len_reached": 24,
+   "frontier_left": 1589249,
+   "depth_exhausted": 7,
+   "slot_key": "05dbdf64644e93c2",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "node_budget",
+   "nodes": 400000,
+   "max_len_reached": 24,
+   "frontier_left": 159548,
+   "depth_exhausted": 11,
+   "slot_key": "177f586c9587b900",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "exhausted",
+   "nodes": 213277,
+   "max_len_reached": 24,
+   "frontier_left": 0,
+   "depth_exhausted": 12,
+   "slot_key": "2262d4340aad795b",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "exhausted",
+   "nodes": 14085,
+   "max_len_reached": 24,
+   "frontier_left": 0,
+   "depth_exhausted": 24,
+   "slot_key": "2ddbf94e55c3e72a",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "exhausted",
+   "nodes": 45868,
+   "max_len_reached": 24,
+   "frontier_left": 0,
+   "depth_exhausted": 24,
+   "slot_key": "36c31a02748a4c40",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "node_budget",
+   "nodes": 400000,
+   "max_len_reached": 24,
+   "frontier_left": 761092,
+   "depth_exhausted": 7,
+   "slot_key": "36d3d870ec049c11",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "exhausted",
+   "nodes": 111439,
+   "max_len_reached": 24,
+   "frontier_left": 0,
+   "depth_exhausted": 24,
+   "slot_key": "719bf91cb3a24240",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "exhausted",
+   "nodes": 139347,
+   "max_len_reached": 24,
+   "frontier_left": 0,
+   "depth_exhausted": 24,
+   "slot_key": "7319c3880e9f56fe",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "exhausted",
+   "nodes": 9021,
+   "max_len_reached": 24,
+   "frontier_left": 0,
+   "depth_exhausted": 12,
+   "slot_key": "74b626dc57ef4fe4",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "node_budget",
+   "nodes": 400000,
+   "max_len_reached": 24,
+   "frontier_left": 751797,
+   "depth_exhausted": 7,
+   "slot_key": "7c4cc9ab863f1903",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "node_budget",
+   "nodes": 400000,
+   "max_len_reached": 24,
+   "frontier_left": 801703,
+   "depth_exhausted": 7,
+   "slot_key": "86cca7550f9b2237",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "exhausted",
+   "nodes": 139347,
+   "max_len_reached": 24,
+   "frontier_left": 0,
+   "depth_exhausted": 24,
+   "slot_key": "8dac97a30d9beae4",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "exhausted",
+   "nodes": 367,
+   "max_len_reached": 24,
+   "frontier_left": 0,
+   "depth_exhausted": 12,
+   "slot_key": "a59b18498c4ef779",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "node_budget",
+   "nodes": 400000,
+   "max_len_reached": 24,
+   "frontier_left": 440544,
+   "depth_exhausted": 11,
+   "slot_key": "a5c20eb71e7c89f0",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "exhausted",
+   "nodes": 22727,
+   "max_len_reached": 24,
+   "frontier_left": 0,
+   "depth_exhausted": 24,
+   "slot_key": "ab311db13bdb805d",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "exhausted",
+   "nodes": 39225,
+   "max_len_reached": 24,
+   "frontier_left": 0,
+   "depth_exhausted": 24,
+   "slot_key": "bc7b6b21a07f7672",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "node_budget",
+   "nodes": 400000,
+   "max_len_reached": 24,
+   "frontier_left": 797953,
+   "depth_exhausted": 11,
+   "slot_key": "c3e94534f3e95dbe",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "node_budget",
+   "nodes": 400000,
+   "max_len_reached": 24,
+   "frontier_left": 63277,
+   "depth_exhausted": 15,
+   "slot_key": "d61607d0ff68ced8",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "node_budget",
+   "nodes": 400000,
+   "max_len_reached": 24,
+   "frontier_left": 496098,
+   "depth_exhausted": 7,
+   "slot_key": "e3b60815d3f22bae",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "node_budget",
+   "nodes": 400000,
+   "max_len_reached": 24,
+   "frontier_left": 404210,
+   "depth_exhausted": 8,
+   "slot_key": "eaa17578e3813903",
+   "class": "ud"
+  },
+  {
+   "found": false,
+   "terminated": "exhausted",
+   "nodes": 79995,
+   "max_len_reached": 24,
+   "frontier_left": 0,
+   "depth_exhausted": 24,
+   "slot_key": "f5f7fb66fbf67e03",
+   "class": "ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 11,
+   "max_len_reached": 11,
+   "frontier_left": 30,
+   "depth_exhausted": 1,
+   "slot_key": "0380183ed3203371",
+   "class": "non_ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 19,
+   "max_len_reached": 20,
+   "frontier_left": 90,
+   "depth_exhausted": 1,
+   "slot_key": "03fe567d09677d46",
+   "class": "non_ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 19,
+   "max_len_reached": 12,
+   "frontier_left": 72,
+   "depth_exhausted": 1,
+   "slot_key": "111f2c6c75491037",
+   "class": "non_ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 37,
+   "max_len_reached": 19,
+   "frontier_left": 111,
+   "depth_exhausted": 2,
+   "slot_key": "241e75faf146e8e3",
+   "class": "non_ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 25,
+   "max_len_reached": 18,
+   "frontier_left": 122,
+   "depth_exhausted": 1,
+   "slot_key": "2ea5b53357342e9e",
+   "class": "non_ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 528,
+   "max_len_reached": 24,
+   "frontier_left": 1447,
+   "depth_exhausted": 4,
+   "slot_key": "31a477d244b3bb38",
+   "class": "non_ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 28,
+   "max_len_reached": 15,
+   "frontier_left": 137,
+   "depth_exhausted": 1,
+   "slot_key": "49b9d82125177354",
+   "class": "non_ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 285,
+   "max_len_reached": 24,
+   "frontier_left": 544,
+   "depth_exhausted": 4,
+   "slot_key": "51967a10765ae1bf",
+   "class": "non_ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 5,
+   "max_len_reached": 6,
+   "frontier_left": 10,
+   "depth_exhausted": 1,
+   "slot_key": "55c435b76c81a8bf",
+   "class": "non_ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 468,
+   "max_len_reached": 23,
+   "frontier_left": 1790,
+   "depth_exhausted": 3,
+   "slot_key": "5e19d603ec70c2b1",
+   "class": "non_ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 3,
+   "max_len_reached": 7,
+   "frontier_left": 11,
+   "depth_exhausted": 0,
+   "slot_key": "651d001b1a93d44a",
+   "class": "non_ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 28,
+   "max_len_reached": 11,
+   "frontier_left": 109,
+   "depth_exhausted": 1,
+   "slot_key": "74d418a33f6e383e",
+   "class": "non_ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 63,
+   "max_len_reached": 24,
+   "frontier_left": 240,
+   "depth_exhausted": 2,
+   "slot_key": "854eb51626e3e8c8",
+   "class": "non_ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 14,
+   "max_len_reached": 17,
+   "frontier_left": 52,
+   "depth_exhausted": 1,
+   "slot_key": "90f770f4e889dfb5",
+   "class": "non_ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 35,
+   "max_len_reached": 18,
+   "frontier_left": 171,
+   "depth_exhausted": 1,
+   "slot_key": "b13bdc1d462bef25",
+   "class": "non_ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 5,
+   "max_len_reached": 12,
+   "frontier_left": 14,
+   "depth_exhausted": 0,
+   "slot_key": "c43fb27a72700c95",
+   "class": "non_ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 118,
+   "max_len_reached": 23,
+   "frontier_left": 470,
+   "depth_exhausted": 2,
+   "slot_key": "c5303c9e24536c50",
+   "class": "non_ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 57,
+   "max_len_reached": 21,
+   "frontier_left": 339,
+   "depth_exhausted": 1,
+   "slot_key": "da80f51463beda53",
+   "class": "non_ud"
+  },
+  {
+   "found": true,
+   "terminated": "found",
+   "nodes": 4,
+   "max_len_reached": 6,
+   "frontier_left": 14,
+   "depth_exhausted": 0,
+   "slot_key": "e7bd8619ceabdcc4",
+   "class": "non_ud"
+  }
+ ]
+}
