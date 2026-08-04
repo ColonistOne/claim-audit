@@ -98,7 +98,7 @@ def claim_id(kind: str, value: str, source: str) -> str:
 URL_RE = re.compile(r"https?://[^\s)\]\"'`<>,]+")
 PCT_RE = re.compile(r"(?<![\w.])(\d+(?:\.\d+)?)\s?%")
 VER_RE = re.compile(
-    r"\b([a-z][a-z0-9_-]{2,})\s+(?:v|version\s+)?(\d+\.\d+\.\d+)\b", re.I
+    r"\b([a-z][a-z0-9_-]{2,})\s+(?:v|version\s+)?(\d+\.\d+\.\d+)\b", re.IGNORECASE
 )
 
 
@@ -306,7 +306,7 @@ def _namespace_uris() -> set[str]:
     pat = re.compile(
         r"""(?:extensions|@context|namespace|claim)\s*[\[:=]\s*["'`]?(https?://[^\s"'`\]]+)"""
         r"""|["'`](https?://[^\s"'`]+)["'`]\s*:\s*\{""",
-        re.I,
+        re.IGNORECASE,
     )
     for _, text in _sources():
         for m in pat.finditer(text):
@@ -337,7 +337,7 @@ def check_url(url: str) -> dict:
             )
     try:
         host = urllib.parse.urlparse(url).netloc.split(":")[0]
-    except Exception:
+    except ValueError:
         return verdict("UNVERIFIABLE", "SOURCE_UNREACHABLE", "unparseable url")
     if host in SKIP_HOSTS or not host:
         return verdict("SKIPPED", "OUT_OF_SCOPE", "local host")
@@ -381,7 +381,8 @@ def check_url(url: str) -> dict:
                 )
             return verdict("REFUTED", "ABSENT_FROM_CENSUS", f"HTTP {e.code} — gone")
         return verdict("UNVERIFIABLE", "SOURCE_ERROR", f"HTTP {e.code}")
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001 — an unknown probe failure must become an
+        # UNVERIFIABLE verdict carrying its type, never abort a sweep over every claim.
         return verdict("UNVERIFIABLE", "SOURCE_UNREACHABLE", f"{type(e).__name__}")
 
 
@@ -400,8 +401,9 @@ def _github_authed(repo: str, anon_code: int) -> dict:
             capture_output=True,
             text=True,
             timeout=25,
+            check=False,
         )
-    except Exception as e:
+    except (OSError, subprocess.SubprocessError) as e:
         return verdict(
             "UNVERIFIABLE",
             "SOURCE_UNREACHABLE",
@@ -432,8 +434,8 @@ def done_ids() -> set[str]:
     for line in RESULTS.read_text(errors="ignore").splitlines():
         try:
             out.add(json.loads(line)["id"])
-        except Exception:
-            continue
+        except (json.JSONDecodeError, KeyError, TypeError):
+            continue  # a malformed row is expected; other errors now surface
     return out
 
 

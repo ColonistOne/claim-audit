@@ -49,47 +49,56 @@ _NEG = r"(?<!not )(?<!NOT )(?<!never )(?<!NEVER )(?<!un)"
 OPPOSED = [
     (
         "cast/not-cast",
-        re.compile(_NEG + r"\b(?:CAST|✅ *CAST)\b", re.I),
-        re.compile(r"\b(?:HAVE NOT CAST|NOT (?:YET )?CAST|⛔ *HAVE NOT)\b", re.I),
+        re.compile(_NEG + r"\b(?:CAST|✅ *CAST)\b", re.IGNORECASE),
+        re.compile(
+            r"\b(?:HAVE NOT CAST|NOT (?:YET )?CAST|⛔ *HAVE NOT)\b", re.IGNORECASE
+        ),
     ),
     (
         "merged/awaiting-merge",
-        re.compile(_NEG + r"\bMERGED\b", re.I),
+        re.compile(_NEG + r"\bMERGED\b", re.IGNORECASE),
         re.compile(
             r"\b(?:awaiting (?:Jack'?s )?merge|not merged|open,? not merged|unmerged)\b",
-            re.I,
+            re.IGNORECASE,
         ),
     ),
     (
         "resolved/open",
-        re.compile(_NEG + r"\b(?:RESOLVED|CLOSED|DISCHARGED|✅ *DONE)\b", re.I),
+        re.compile(
+            _NEG + r"\b(?:RESOLVED|CLOSED|DISCHARGED|✅ *DONE)\b", re.IGNORECASE
+        ),
         re.compile(
             r"\b(?:still open|remains open|unresolved|OPEN /|⏳|🔴 *(?:open|pending))\b",
-            re.I,
+            re.IGNORECASE,
         ),
     ),
     (
         "published/unpublished",
-        re.compile(_NEG + r"\b(?:PUBLISHED|LIVE on (?:PyPI|npm)|RELEASED)\b", re.I),
         re.compile(
-            r"\b(?:NOT yet published|unpublished|awaiting release|not released)\b", re.I
+            _NEG + r"\b(?:PUBLISHED|LIVE on (?:PyPI|npm)|RELEASED)\b", re.IGNORECASE
+        ),
+        re.compile(
+            r"\b(?:NOT yet published|unpublished|awaiting release|not released)\b",
+            re.IGNORECASE,
         ),
     ),
     (
         "fixed/still-broken",
-        re.compile(_NEG + r"\b(?:FIXED|✅ *fixed)\b", re.I),
-        re.compile(r"\b(?:still (?:broken|failing|red)|NOT fixed|unfixed)\b", re.I),
+        re.compile(_NEG + r"\b(?:FIXED|✅ *fixed)\b", re.IGNORECASE),
+        re.compile(
+            r"\b(?:still (?:broken|failing|red)|NOT fixed|unfixed)\b", re.IGNORECASE
+        ),
     ),
     (
         "voted/not-voted",
         re.compile(
             _NEG
             + r"\b(?:my (?:approve|reject|vote) stands|already voted|VOTED (?:APPROVE|REJECT)|vote cast)\b",
-            re.I,
+            re.IGNORECASE,
         ),
         re.compile(
             r"(?:my_vote\s*[:=]\s*None|\bnot (?:yet )?voted\b|\bdo not auto-cast\b|\bNOT reviewed\b)",
-            re.I,
+            re.IGNORECASE,
         ),
     ),
 ]
@@ -98,7 +107,7 @@ OPPOSED = [
 #: "SUPERSEDED", "CORRECTED", "was X, now Y" are the honest way to record history.
 RECONCILED = re.compile(
     r"SUPERSEDED|STATUS CORRECTED|RECONCILED|\bwas wrong\b|CORRECTION|no longer accurate",
-    re.I,
+    re.IGNORECASE,
 )
 
 

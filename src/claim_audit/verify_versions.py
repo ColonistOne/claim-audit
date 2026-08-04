@@ -129,7 +129,7 @@ def _get_json(url: str) -> dict | None:
             return json.loads(r.read())
     except urllib.error.HTTPError as e:
         return {"__http__": e.code}
-    except Exception:
+    except (urllib.error.URLError, OSError, ValueError, json.JSONDecodeError):
         return None
 
 
@@ -189,8 +189,9 @@ def check_github_tags(name: str, version: str) -> dict | None:
                 capture_output=True,
                 text=True,
                 timeout=30,
+                check=False,
             )
-        except Exception:
+        except (OSError, subprocess.SubprocessError):
             return None
         if p.returncode != 0:
             continue

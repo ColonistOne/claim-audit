@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Regression tests for the claim verifiers. Both directions, always.
 
 Every test here exists because the checker under test returned a confident,
@@ -181,7 +180,7 @@ def _with_http_error(code: int) -> str:
     import urllib.error
     import urllib.request
 
-    def boom(req, timeout=None):  # noqa: ARG001
+    def boom(req, timeout=None):
         raise urllib.error.HTTPError(
             "https://example.invalid/x",
             code,
